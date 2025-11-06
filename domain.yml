@@ -1,0 +1,44 @@
+version: "3.1"
+
+intents:
+  - ask_question
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+entities:
+  - topic
+
+actions:
+  - action_llama3_explain
+
+responses:
+  utter_greet:
+  - text: "Hello! Ask me any academic question."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a great day."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_default:
+  - text: "Sorry, I couldn't understand that. Try asking in a different way."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
